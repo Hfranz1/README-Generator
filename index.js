@@ -1,13 +1,68 @@
-// TODO: Include packages needed for this application
+//packages needed for this application
+const fs = require("fs");
+const inquirer = require("inquirer");
+const Choice = require("inquirer/lib/objects/choice");
+const generateMarkdown = require("./generateMarkdown");
+const generateMarkdown = require("./generateMarkdown")
+// array of questions for user input
+const questions = [
+    { type: "input", message: "What do you want for a title?", name: "title" },
+    {
+        type: "input",
+        message: "Include installation instructions.",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "Provide usage instructions.",
+        name: "usage"
+    },
+    {
+        type: "list",
+        message: "License choices",
+        name: "LicenseChoices"
+        choices: ["MIT", "BSD 3", "None", "APACHE 2.0", "GPLB 3.0"],
+    },
+    {
+        type: "input",
+        message: "How can other developers contribute?",
+        name: "contributind",
+    },
+    {
+        type: "input",
+        message: "Test information",
+        name: "tests",
+    },
+    {
+        type: "input",
+        message: "GitHub user name",
+        name: "github",
+    },
+    {
+        type: "input",
+        message: "Email adress",
+        name: "email",
+    },
+];
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// function to write README file
+function writeToFile(data) {
+    fs.writeFile("./README.md", data, (error) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log("File Written");
+        }
+    });
+}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
+//function to initialize app
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        let generateMarkdown = generateMarkdown(data);
+        writeToFile(generateMarkdown);
+    });
+}
 
 // Function call to initialize app
 init();

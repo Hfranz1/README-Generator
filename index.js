@@ -2,7 +2,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const Choice = require("inquirer/lib/objects/choice");
-const generateMarkdown = require("./generateMarkdown");
 const generateMarkdown = require("./generateMarkdown")
 // array of questions for user input
 const questions = [
@@ -59,7 +58,6 @@ function writeToFile(data) {
 //function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
-        let generateMarkdown = generateMarkdown(data);
         writeToFile(generateMarkdown);
     });
 }

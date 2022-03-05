@@ -19,13 +19,18 @@ const questions = [
     {
         type: "list",
         message: "License choices",
-        name: "LicenseChoices",
+        name: "licenseChoices",
         choices: ["MIT", "BSD 3", "None", "APACHE 2.0", "GPLB 3.0"],
     },
     {
         type: "input",
         message: "How can other developers contribute?",
-        name: "contributind",
+        name: "contributing",
+    },
+    {
+        type: "input",
+        message: "Description",
+        name: "discription"
     },
     {
         type: "input",
@@ -58,7 +63,7 @@ function writeToFile(data) {
 //function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
-        writeToFile(generateMarkdown);
+        writeToFile(generateMarkdown(data));
     });
 }
 

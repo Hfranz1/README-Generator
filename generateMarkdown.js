@@ -53,13 +53,13 @@ function renderLicenseSection(license) {
   if (license === null) {
     return ""
   } else {
-    return 'This repository is covered under: ${license}.<br />${renderLicenseLink(license)}';
+    return `This repository is covered under: ${license}.<br />${renderLicenseLink(license)}`;
   }
 }
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `${renderLicenseBadge(data.licenseSelection)}
+  return `${renderLicenseBadge(data.licenseChoices)}
   
   # ${data.title}
 
@@ -85,11 +85,11 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${renderLicenseSection(data.licenseSelection)}
+  ${renderLicenseSection(data.licenseChoices)}
 
   ## Contributing
 
-  ${data.contrubuting}
+  ${data.contributing}
 
   ## Tests
 

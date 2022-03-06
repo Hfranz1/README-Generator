@@ -1,27 +1,13 @@
-<<<<<<< HEAD
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-  
-  # t
-
+### README Generator 
   ## Desctiption
-
-  j
-
-  ## Table of Contents
-  -[Istillation](#installation)
-  -[Usage](#usage)
-  -[License](#license)
-  -[Contributing](#contributing)
-  -[Tests](#tests)
-  -[Questions](#questions)
+  An application that can help the user to write a README file for their project that showcase their project. The user is asker a series of questions in the terminal to creat a README document that asks for the users email, title of project, Github, description, installation and usage. 
 
   ## Installation
-
-  f
+  To install run npm i 
 
   ## Usage
 
-  k
+  To create a high quality README file.
 
   ## License
 
@@ -29,15 +15,15 @@
 
   ## Contributing
 
-  k
+  Hannah Franz
 
   ## Tests
 
-  i
+  To run tests, run the following command: Tests
 
   ## Questions
 
-  Please contact me with any questions h@g.com or at https://github.com/j.
+  Please contact me with any questions hannahfranz25@gmail.com or at https://github.com/hfranz1.
 =======
 # README-Generator
 Desctiption
@@ -51,8 +37,11 @@ Acceptance Criteria
 
 ## Usage
 
-https://user-images.githubusercontent.com/87962035/156811647-a10ba5bf-66d4-4433-aed2-0627a117ee44.mov
+https://user-images.githubusercontent.com/87962035/156909499-45f55c5a-0cf8-4881-b12a-04ec4f8d9401.mov
 
+https://user-images.githubusercontent.com/87962035/156909530-1e472fdc-888e-444e-a8e1-93c7d38ecb3a.mov
+
+https://user-images.githubusercontent.com/87962035/156909538-2c8b169b-8336-411a-8938-e30c62b6a6ef.mov
 
 
 Links
@@ -62,4 +51,4 @@ Links
 <p>
   GitHub: https://github.com/Hfranz1/README-Generator
   </p>
->>>>>>> fe57342f6627af0c448f6a2634d40c6bff58faed
+
